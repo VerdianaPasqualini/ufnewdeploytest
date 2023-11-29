@@ -1,0 +1,192 @@
+/*-- scss:functions --*/
+
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+/*-- variables --*/
+
+:root {
+  --base-color: black;
+}
+/*-- fonts --*/
+
+@font-face {
+  font-family: Noto Serif;
+  src: url("fonts/notoserif-variable.woff2");
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap");
+
+/*-- rules --*/
+
+h1.title {
+  font-family: Manrope;
+  font-weight: 400;
+  color: var(--base-color);
+  font-size: 2.9rem;
+  line-height: 3.85rem;
+  margin-top: 50px !important;
+  margin-bottom: 30px !important;
+  position: relative !important;
+}
+
+h1 {
+  font-family: Manrope;
+  color: var(--base-color);
+  font-size: 1.875rem;
+  line-height: 2.55rem;
+  font-weight: 700;
+  padding-top: 15px !important;
+  margin-top: 30px !important;
+  position: sticky !important;
+  top: 0 !important;
+  background: white;
+  z-index: 1;
+}
+
+mark {
+  --reduce-mark-color: #fff;
+  box-shadow: inset 0 0.33em 0 0 var(--reduce-mark-color),
+    inset 0 -0.28em 0 0 var(--reduce-mark-color);
+  background: yellow;
+}
+
+h2 {
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--base-color);
+}
+
+body {
+  font-family: Manrope;
+  font-size: 18px;
+  color: var(--base-color);
+}
+
+ul {
+  list-style: url("../../img/bullet.svg");
+}
+
+li {
+  padding-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base-color);
+}
+
+a:hover {
+  color: var(--base-color);
+  background-color: yellow;
+  --reduce-mark-color: #fff;
+  box-shadow: inset 0 0.33em 0 0 var(--reduce-mark-color),
+    inset 0 -0.28em 0 0 var(--reduce-mark-color);
+  //font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .mybutton {
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 480px) {
+  .filters {
+    margin-left: 200px;
+  }
+}
+
+.mybutton {
+  border-radius: 20px !important;
+  font-family: Manrope !important;
+  font-size: 14px !important;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #ced3dc !important;
+}
+
+.mybutton:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mybutton:focus {
+  transform: translateY(1px);
+  color: white !important;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.selectedButton {
+  transform: translateY(1px);
+  background-color: #36006c !important;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.selectedButton1 {
+  transform: translateY(1px);
+  background-color: #531c89 !important;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.selectedButton2 {
+  transform: translateY(1px);
+  background-color: #773fad !important;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+.table {
+  width: auto;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#totalAnswers {
+  font-size: 14px !important;
+}
+
+.footer {
+  font-size: 0.8em;
+  margin-top: 70px;
+}
+.totalAnswers {
+  font-size: 14px !important;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+}
+
+details > summary {
+  color: var(--base-color);
+  font-style: italic;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+  color: #b1b5ba;
+}
+
+details[open] summary::after {
+  content: attr(data-open);
+}
+
+details:not([open]) summary::after {
+  content: attr(data-close);
+}
+
+details > summary::marker {
+  content: "+ ";
+  font-style: normal;
+}
+
+details[open] > summary::marker {
+  content: "- ";
+  font-style: normal;
+}
